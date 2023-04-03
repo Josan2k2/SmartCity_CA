@@ -1,0 +1,30 @@
+package Service2Street;
+
+/*
+ * @author Jose Andres Silva Hirane
+ * Distributed Systems CA
+ */
+public class emergencyLights {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class autoTrafficLights {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class autoSignals {
+  public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
