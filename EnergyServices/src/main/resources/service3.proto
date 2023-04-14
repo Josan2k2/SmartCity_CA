@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.grpcenergy.services";
+option java_outer_classname = "Service3Impl";
+
+package EnergyServices;
+
+service Seafront{
+    rpc turnOn (Sea) return (LightsOn){}
+    rpc turnOff (Sea) return (LightsOff){}
+}
+service LifeGuard{
+    rpc turnOn (Guard) return (LightsOn){}
+    rpc turnOff (Guard) return (LightsOff){}
+}
+service Rescuers{
+    rpc turnOn (Medical) return (LightsOn){}
+    rpc turnOff (Medical) return (LightsOff){}
+}
+
+message Seafront{
+    string turnOn = 1;
+    string turnOff = 2;
+}
+message LifeGuard{
+    string turnOn = 1;
+    string turnOff = 2;
+}
+message Rescuers{
+    string turnOn = 1;
+    string turnOff = 2;
+}

@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.grpcenergy.services";
+option java_outer_classname = "Service2Impl";
+
+package Energyservices;
+
+//Service2 definitions
+service AutoTraffic{
+    rpc turnOn (Auto) returns (LightsOn){}
+    rpc turnOff (Auto) returns (LightsOff){}
+}
+service EmergencyTraffic{
+    rpc turnOn (EmergTraffic) returns (LightsOn){}
+    rpc turnOff (EmergTraffic) returns (LightsOff){}
+}
+service SignalsTraffic{
+    rpc turnOn ( SignalsTraffic) returns (LightsOn){}
+    rpc turnOff ( SignalsTraffic) returns (LightsOff){}
+}
+
+message AutoTraffic{
+    string turnOn = 1;
+    string turnOff = 2;
+}
+message EmergencyTraffic{
+    string turnOn = 1;
+    string turnOff = 2;
+}
+message SignalsTraffic{
+    string turnOn = 1;
+    string turnOff = 2;
+}

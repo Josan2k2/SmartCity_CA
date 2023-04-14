@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+//Options for the GRPC
+option java_multiple_files = true;
+option java_package = "org.grpcenergy.services";
+option java_outer_classname = "Service1Impl";
+
+package EnergyServices;
+
+//Service1 definitions
+service EmergencyLights{
+    rpc turnLightOn (Emergency) return (LightsOn){}
+    rpc turnLightOff (Emergency) return (LightsOff){}
+}
+service StreetLightsOn{
+    rpc turnLightOn (Street) return (LightsOn){}
+}
+service StreetLightsOff{
+    rpc turnLightOff (Street) return (LightsOff){}
+}
+
+//Define the messages for service1
+message EmergencyRequest{
+    string turnOn = 1;
+    string turnOff = 2;
+}
+message StreetLightsOnRequest{
+    string turnLightOn = 1;
+}
+message StreetLightsOffRequest{
+    string turnLightOff = 2;
+}
+
+message EmergencyResponse{
+    string EmergencyLights = 1;
+}
+message StreetLightsOnResponse{
+    string turnLightOn = 1;
+}
+message StreetLightsOffResponse{
+    string turnLightOff = 2;
+}
